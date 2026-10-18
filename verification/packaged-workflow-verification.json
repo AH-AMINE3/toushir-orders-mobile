@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-17T07:03:38.467Z",
+  "passed": 10,
+  "checks": [
+    "API creates a confirmed, prepared and driver-assigned RFQ order",
+    "Courier UI confirms pickup and arrival through server transitions",
+    "Merchant UI approves four accepted / one refused units and creates a real expiring QR",
+    "Courier UI consumes quantity-bound receipt then records distinct cash/change",
+    "Server confirms partial receipt, adjusted total and exactly one 500 DA cash payment",
+    "Merchant and courier retain independent actors in concurrent browser tabs",
+    "Merchant UI creates an authorized conversation and persists an in-app message",
+    "Merchant UI displays a published campaign and server-calculated qualifying preview",
+    "Merchant UI reconciles actual paid-order points and reserves one reward without double-debit",
+    "No browser runtime errors"
+  ],
+  "orderNumber": "TS-261017-29749728",
+  "origin": "http://127.0.0.1:5860",
+  "bundle": "index-16f74d91dadacd08108ed2249aec7ac8.js"
+}

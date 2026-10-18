@@ -1,0 +1,24 @@
+name: Verify mobile ordering app
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-fund --no-audit
+      - run: npm run typecheck
+      - run: node scripts/mobile-verify.cjs
+      - run: npm run build:web -- --max-workers 1
+        env:
+          CI: '1'
+          EXPO_NO_TELEMETRY: '1'

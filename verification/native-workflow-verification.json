@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-17T06:40:17.755Z",
+  "platform": "Android Emulator API36 arm64",
+  "passed": 6,
+  "checks": [
+    "Android AuthSession system-browser code/S256 login returns the actual scoped driver identity",
+    "Native assigned manifest and depot pickup commit the delivery transition",
+    "Native foreground permission and Expo Location publish an explicitly emulator-supplied GPS fix",
+    "Native manual QR-code fallback consumes matching partial receipt without implying payment",
+    "Native cash UI commits 140 DA,200 tendered,60 change as exactly one separate payment",
+    "Native SecureStore restores the real driver after app restart"
+  ]
+}

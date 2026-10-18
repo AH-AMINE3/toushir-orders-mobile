@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-17T06:35:57.268Z",
+  "passed": 3,
+  "checks": [
+    "Expo PWA AuthSession popup completes code/S256 and API validates the real driver JWT",
+    "PWA restores authenticated driver after SDK refresh-token rotation",
+    "No PWA JavaScript runtime errors"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "cli": { "version": ">= 16.0.0" },
+  "build": {
+    "merchant-preview": { "distribution": "internal", "env": {"EXPO_PUBLIC_APP_ROLE":"MERCHANT"}, "android": {"buildType":"apk"}, "ios":{"simulator":true} },
+    "driver-preview": { "distribution": "internal", "env": {"EXPO_PUBLIC_APP_ROLE":"DRIVER"}, "android": {"buildType":"apk"}, "ios":{"simulator":true} },
+    "merchant-production": { "autoIncrement": true, "env":{"EXPO_PUBLIC_APP_ROLE":"MERCHANT"} },
+    "driver-production": { "autoIncrement": true, "env":{"EXPO_PUBLIC_APP_ROLE":"DRIVER"} }
+  },
+  "submit": { "merchant-production": {}, "driver-production": {} }
+}

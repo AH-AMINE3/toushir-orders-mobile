@@ -1,0 +1,5 @@
+import {useEffect,useRef,useState} from 'react';
+import {Platform} from 'react-native';
+import {HubConnectionBuilder,LogLevel} from '@microsoft/signalr';
+import {API_ORIGIN,getBearer} from './api';
+export function useEngagementLive(userId:string,onUpdate:()=>void){const callback=useRef(onUpdate);callback.current=onUpdate;const[live,setLive]=useState(false);useEffect(()=>{let active=true;const origin=API_ORIGIN||(Platform.OS==='web'?window.location.origin:'');const connection=new HubConnectionBuilder().withUrl(origin+'/hubs/commerce',{accessTokenFactory:()=>getBearer()}).withAutomaticReconnect([0,2000,10000,30000]).configureLogging(LogLevel.None).build();connection.on('engagement.updated',()=>callback.current());connection.onreconnecting(()=>active&&setLive(false));connection.onreconnected(()=>{if(active){setLive(true);callback.current();}});connection.onclose(()=>active&&setLive(false));connection.start().then(()=>{if(active)setLive(true);}).catch(()=>active&&setLive(false));return()=>{active=false;connection.stop().catch(()=>{});};},[userId]);return live;}

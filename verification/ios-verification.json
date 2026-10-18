@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-17T06:53:59.365043+00:00",
+  "platform": "iPhone 17 Pro Simulator \u00b7 iOS 26.5",
+  "checks": [
+    "Xcode Release simulator build succeeded after scripted Finder metadata workaround",
+    "Native app installed and launched independently of Metro",
+    "Native catalogue screen rendered 2500 server products, DM Sans, icons and product images",
+    "Separate courier Release simulator build succeeded",
+    "Both native app identifiers installed together; courier home and server-backed empty manifest rendered"
+  ],
+  "limits": [
+    "iOS UI automation service could not start; native business mutations and PKCE were verified on Android, not iOS."
+  ],
+  "apps": [
+    "com.toushir.commerce",
+    "com.toushir.livreur"
+  ]
+}

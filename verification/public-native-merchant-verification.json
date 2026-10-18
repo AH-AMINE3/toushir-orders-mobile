@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-17T07:46:27.118Z",
+  "apiOrigin": "https://toushir-commerce-staging.onrender.com",
+  "platform": "Android Emulator API36 arm64",
+  "passed": 3,
+  "checks": [
+    "Signed merchant preview loads the staging catalogue over HTTPS",
+    "Native commerce invitation deep link creates a scoped merchant in the inviter workspace",
+    "Signed merchant app restores its joined session after restart"
+  ]
+}
